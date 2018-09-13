@@ -2,30 +2,30 @@ document.getElementById('question').innerHTML = "Hello, Seeker";
 document.getElementById('answer').innerHTML = "What do you want to know?";
 
 let questionsAnswers = [{
-    question: '',
-    answer1: '',
-    answer2: '',
-    answer3: ''
+    question: 'What color are you most likely to wear?',
+    answer1: 'Black',
+    answer2: 'Blue',
+    answer3: 'Bright Orange'
     },{
-    question: '',
-    answer1: '',
-    answer2: '',
-    answer3: ''
+    question: 'Where are you most likely to hide trash?',
+    answer1: 'Garbage Bag',
+    answer2: 'Under the Bed',
+    answer3: 'In a Drawer'
     },{
-    question: '',
-    answer1: '',
-    answer2: '',
-    answer3: ''
+    question: 'What is the best source of inspiration?',
+    answer1: 'Singing in the Shower',
+    answer2: 'Singing in Public',
+    answer3: 'Singing in Your Sleep'
     },{
-    question: '',
-    answer1: '',
-    answer2: '',
-    answer3: ''
+    question: 'How often do you have ear worms?',
+    answer1: 'Never',
+    answer2: 'Always',
+    answer3: "It's a world of Laughter, a world of tears..."
     },{
-    question: '',
-    answer1: '',
-    answer2: '',
-    answer3: ''
+    question: 'Bananaphone?',
+    answer1: 'Ring ring ring ring ring ring ring banana phone',
+    answer2: 'Whippersnapper!',
+    answer3: 'What?'
     },{
     question: '',
     answer1: '',
