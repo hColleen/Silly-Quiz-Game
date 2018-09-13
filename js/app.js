@@ -27,35 +27,35 @@ let questionsAnswers = [{
     answer2: 'Whippersnapper!',
     answer3: 'What?'
     },{
-    question: '',
-    answer1: '',
-    answer2: '',
-    answer3: ''
+    question: 'Badger?',
+    answer1: 'Badger Badger Mushroom Mushroom',
+    answer2: '...',
+    answer3: 'Weasels?'
     },{
-    question: '',
-    answer1: '',
-    answer2: '',
-    answer3: ''
+    question: 'What was your first meme?',
+    answer1: 'Hamster Dance',
+    answer2: 'LOLCats',
+    answer3: 'Harlem Shake'
     },{
-    question: '',
-    answer1: '',
-    answer2: '',
-    answer3: ''
+    question: 'What is the internet?',
+    answer1: 'A Series of Tubes',
+    answer2: 'A Raging Pit of Fire',
+    answer3: 'An Information Sharing Platform'
     },{
-    question: '',
-    answer1: '',
-    answer2: '',
-    answer3: ''
+    question: 'Your favorite site?',
+    answer1: 'YouTube',
+    answer2: 'FaceBook',
+    answer3: "I'm Just Going to Say Something Smart Like Wikipedia"
     },{
-    question: '',
-    answer1: '',
-    answer2: '',
-    answer3: ''
+    question: 'Your favorite number?',
+    answer1: '7',
+    answer2: '13',
+    answer3: 'OVER 9000'
     },{
-    question: '',
-    answer1: '',
-    answer2: '',
-    answer3: ''
+    question: 'How much time do you spend on the computer per day?',
+    answer1: '8 hours',
+    answer2: '36 hours',
+    answer3: "I'm Going to Lie, So.... 2 hours"
     },{
     question: '',
     answer1: '',
