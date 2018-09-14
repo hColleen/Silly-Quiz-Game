@@ -187,6 +187,34 @@ holder.innerHTML = quizHTML.join(" ");
 
 //make radio buttons advance to next question
 
-//fortune/answer array
+/*fortune/answer array
+from https://www.funny-jokes-quotes-sayings.com/funny-fortune-cookie-sayings.html and 
+https://www.brainyquote.com/topics/funny */
+
+let fortunes = [
+"Some days you are pigeon, some days you are statue. Today, bring umbrella.",
+"Two days from now, tomorrow will be yesterday.",
+"You are cleverly disguised as responsible adult.",
+"Life is sexually transmitted condition.",
+"Be nice to friends. You might need them to empty your bedpan.",
+"Fortune not found? Abort, Retry, Ignore.",
+"If this is coffee, please bring me some tea; but if this is tea, please bring me some coffee.",
+"Your fake plants died because you did not pretend to water them.",
+"Everything is funny, as long as it's happening to somebody else.",
+"Electricity is really just organized lightning.",
+"We are all born mad. Some remain so.",
+"Common sense is the collection of prejudices acquired by age eighteen.",
+"The most exciting phrase to hear in science, the one that hearlds new discoveries, is not 'Eureka!' but 'That's funny...'",
+"If two wrongs don't make a right, try three.",
+"Be obscure clearly.",
+"Let's have some new cliches.",
+"Conversations would be vastly improved by the constant use of four simple words: I do not know.",
+"Housework can't kill you, but why take a chance?",
+"Spend a year dead for tax reasons.",
+"Everything you like is either illegal, immoral, or fattening.",
+"Only the mediocre are always at their best."
+];
+
+//select random fortune
 
 //display fortune
