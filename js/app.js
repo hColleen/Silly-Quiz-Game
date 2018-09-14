@@ -153,13 +153,29 @@ function shuffle(array){
 
 let getRandomQuestion = shuffle(numArr(questionsAnswers.length));
 
+//define variables
+
 let quizArray = [], quest, quizHTML = [], quizLength = 5;
+
+//create question/answer array
 
 function createQuizArray() {
     for (let i = 0; i < quizLength; i++){
-        let quest = questionsAnswers[getRandomQuestion[i]];
+        quest = questionsAnswers[getRandomQuestion[i]];
         quizArray.push(quest);
     }
 }
 
 createQuizArray();
+
+//create HTML to display questions
+
+for (let i = 0; i < quizArray.length; i ++) {
+    quest = quizArray[i];
+    let questInfo = `<div class ='question'><h3>${quest.question}</h3>
+    <input type = 'radio' name = 'answer' value ${quest.answer1}> ${quest.answer1}<br>
+    <input type = 'radio' name = 'answer' value ${quest.answer2}> ${quest.answer2}<br>
+    <input type = 'radio' name = 'answer' value ${quest.answer3}> ${quest.answer3}<br>
+    </div>`
+    quizHTML.push(questInfo);
+}
