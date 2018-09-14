@@ -153,11 +153,13 @@ function shuffle(array){
 
 let getRandomQuestion = shuffle(numArr(questionsAnswers.length));
 
-let quizArray = [], quizLength = 5;
+let quizArray = [], quest, quizHTML = [], quizLength = 5;
 
-function createQuzArray() {
+function createQuizArray() {
     for (let i = 0; i < quizLength; i++){
         let quest = questionsAnswers[getRandomQuestion[i]];
         quizArray.push(quest);
     }
 }
+
+createQuizArray();
