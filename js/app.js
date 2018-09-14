@@ -82,30 +82,30 @@ let questionsAnswers = [{
     answer2: 'Sometimes It\'s Fun',
     answer3: 'Work...What\'s That?'
     },{
-    question: '',
-    answer1: '',
-    answer2: '',
-    answer3: ''
+    question: 'Complete the following: Girls...',
+    answer1: 'Girls, Girls',
+    answer2: 'Just Wanna Have Fun',
+    answer3: 'In Uniform'
     },{
-    question: '',
-    answer1: '',
-    answer2: '',
-    answer3: ''
+    question: 'What is the best time to party?',
+    answer1: '1999',
+    answer2: 'All Night and All of the Day',
+    answer3: 'Good Times'
     },{
-    question: '',
-    answer1: '',
-    answer2: '',
-    answer3: ''
+    question: 'Which is the best TV show?',
+    answer1: 'M*A*S*H',
+    answer2: 'Night Court',
+    answer3: 'Star Trek'
     },{
-    question: '',
-    answer1: '',
-    answer2: '',
-    answer3: ''
+    question: 'How many red balloons do you need?',
+    answer1: '1',
+    answer2: '0, They Fly Away More Than Other Color Balloons',
+    answer3: '99'
     },{
-    question: '',
-    answer1: '',
-    answer2: '',
-    answer3: ''
+    question: 'Which is the best cookie?',
+    answer1: 'Sugar',
+    answer2: 'Chocolate Chip',
+    answer3: 'White Chocolate Macadamia'
     },{
     question: '',
     answer1: '',
