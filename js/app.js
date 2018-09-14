@@ -173,9 +173,9 @@ createQuizArray();
 for (let i = 0; i < quizArray.length; i ++) {
     quest = quizArray[i];
     let questInfo = `<div class ='question'><h3>${quest.question}</h3>
-    <input type = 'radio' name = 'answer' value ${quest.answer1}> ${quest.answer1}<br>
-    <input type = 'radio' name = 'answer' value ${quest.answer2}> ${quest.answer2}<br>
-    <input type = 'radio' name = 'answer' value ${quest.answer3}> ${quest.answer3}<br>
+    <input type = 'radio' name = 'answer' value = '${quest.answer1}'> ${quest.answer1}<br>
+    <input type = 'radio' name = 'answer' value = '${quest.answer2}'> ${quest.answer2}<br>
+    <input type = 'radio' name = 'answer' value = '${quest.answer3}'> ${quest.answer3}<br>
     </div>`
     quizHTML.push(questInfo);
 }
