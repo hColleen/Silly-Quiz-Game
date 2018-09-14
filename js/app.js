@@ -112,7 +112,7 @@ let questionsAnswers = [{
     question: '"\uD83D\uDC4D"',
     answer1: 'You Got It, Dude',
     answer2: 'Heeeeey',
-    answer3: 'Whose Got Two Thumbs? This Dude!'
+    answer3: 'Who\'s Got Two Thumbs? This Dude!'
     },{
     question: 'Pluto',
     answer1: 'Mickey\'s Dog',
