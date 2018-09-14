@@ -57,30 +57,30 @@ let questionsAnswers = [{
     answer2: '36 hours',
     answer3: "I'm Going to Lie, So.... 2 hours"
     },{
-    question: '',
-    answer1: '',
-    answer2: '',
-    answer3: ''
+    question: 'What kind of food would you bring to a potluck?',
+    answer1: 'Cake',
+    answer2: 'Cassarole',
+    answer3: "Potato Chips (They're a Veggie, Right?)"
     },{
-    question: '',
-    answer1: '',
-    answer2: '',
-    answer3: ''
+    question: 'What kind of games do you like to play?',
+    answer1: 'Computer-based',
+    answer2: 'Table Top based',
+    answer3: 'Psychological'
     },{
-    question: '',
-    answer1: '',
-    answer2: '',
-    answer3: ''
+    question: 'What time of day do you like best?',
+    answer1: 'The Liminal Times',
+    answer2: 'Noon',
+    answer3: 'Night'
     },{
-    question: '',
-    answer1: '',
-    answer2: '',
-    answer3: ''
+    question: 'Complete the following: The sun is...',
+    answer1: 'A Great Big Ball of Incandescent Gas',
+    answer2: 'Trying to Kill Me',
+    answer3: 'A Thing, I Suppose. I Haven\'t Seen It'
     },{
-    question: '',
-    answer1: '',
-    answer2: '',
-    answer3: ''
+    question: 'Complete the following: I work because...',
+    answer1: 'Bills, Bills, Bills',
+    answer2: 'Sometimes It\'s Fun',
+    answer3: 'Work...What\'s That?'
     },{
     question: '',
     answer1: '',
