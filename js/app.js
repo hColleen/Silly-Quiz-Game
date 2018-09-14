@@ -1,3 +1,4 @@
+//question/answer array
 let questionsAnswers = [{
     question: 'What color are you most likely to wear?',
     answer1: 'Black',
@@ -181,3 +182,11 @@ let holder = document.getElementById('question');
 let fortune = document.getElementById('answer');
 
 holder.innerHTML = quizHTML.join(" ");
+
+//display questions one at a time
+
+//make radio buttons advance to next question
+
+//fortune/answer array
+
+//display fortune
