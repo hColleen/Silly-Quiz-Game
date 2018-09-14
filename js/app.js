@@ -1,6 +1,3 @@
-document.getElementById('question').innerHTML = "Hello, Seeker";
-document.getElementById('answer').innerHTML = "What do you want to know?";
-
 let questionsAnswers = [{
     question: 'What color are you most likely to wear?',
     answer1: 'Black',
@@ -179,3 +176,8 @@ for (let i = 0; i < quizArray.length; i ++) {
     </div>`
     quizHTML.push(questInfo);
 }
+
+let holder = document.getElementById('question');
+let fortune = document.getElementById('answer');
+
+holder.innerHTML = quizHTML.join(" ");
