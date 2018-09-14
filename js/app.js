@@ -107,25 +107,25 @@ let questionsAnswers = [{
     answer2: 'Chocolate Chip',
     answer3: 'White Chocolate Macadamia'
     },{
-    question: '',
-    answer1: '',
-    answer2: '',
-    answer3: ''
+    question: 'Define \'insanity\'',
+    answer1: 'Doing the Same Think Over and Over and Expecting Different Results',
+    answer2: 'Politics',
+    answer3: 'Don\'t Be So Rude!'
     },{
-    question: '',
-    answer1: '',
-    answer2: '',
-    answer3: ''
+    question: '"\uD83D\uDC4D"',
+    answer1: 'You Got It, Dude',
+    answer2: 'Heeeeey',
+    answer3: 'Whose Got Two Thumbs? This Dude!'
     },{
-    question: '',
-    answer1: '',
-    answer2: '',
-    answer3: ''
+    question: 'Pluto',
+    answer1: 'Mickey\'s Dog',
+    answer2: 'A planetoid on the inner edge of the Kuiper Belt',
+    answer3: 'You Hear About Pluto? That\'s Messed Up, Right?'
     },{
-    question: '',
-    answer1: '',
-    answer2: '',
-    answer3: ''
+    question: 'You told me to do it.',
+    answer1: 'I Did?',
+    answer2: 'I Did',
+    answer3: 'What, You Listened to Me?'
 }];
 
 //select random questions/answers from array, preventing repeats (tutorial from here: https://inteist.com/javascript-generate-pseudo-random-set/ )
