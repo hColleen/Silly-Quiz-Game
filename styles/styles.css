@@ -6,19 +6,31 @@ body{
 }
 
 header{
-font-family: 'Indie Flower', cursive;
-font-size: 4rem;
+    font-family: 'Indie Flower', cursive;
+    font-size: 4rem;
 }
 
 p{
-font-family: 'Gamja Flower', cursive;
-font-size: 2rem;
+    font-family: 'Gamja Flower', cursive;
+    font-size: 2rem;
 }
 
-#question-holder{
+#questionHolder{
     width: 75%;
     border: 1px solid black;
     border-radius: 10px;
     background-color: silver;
     margin: auto;
+}
+
+#nextButton {
+    width: 25%;
+    font-family: 'Gamja Flower', cursive;
+    font-size: 2rem;
+    background-color: dimgray;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    float: right;
+    margin: 15px;
 }
