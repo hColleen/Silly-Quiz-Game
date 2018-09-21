@@ -170,7 +170,7 @@ createQuizArray();
 
 for (let i = 0; i < quizArray.length; i ++) {
     quest = quizArray[i];
-    let questInfo = `<div class ='question'><h3>${quest.question}</h3>
+    let questInfo = `<div class ='question hidden'><h3>${quest.question}</h3>
     <input type = 'radio' name = 'answer' value = '${quest.answer1}'> ${quest.answer1}<br>
     <input type = 'radio' name = 'answer' value = '${quest.answer2}'> ${quest.answer2}<br>
     <input type = 'radio' name = 'answer' value = '${quest.answer3}'> ${quest.answer3}<br>
@@ -178,14 +178,21 @@ for (let i = 0; i < quizArray.length; i ++) {
     quizHTML.push(questInfo);
 }
 
-let holder = document.getElementById('question');
-let fortune = document.getElementById('answer');
+let holder = document.getElementById('quizQuestion');
+let fortune = document.getElementById('quizAnswer');
+let question = document.getElementsByClassName('question');
 
 holder.innerHTML = quizHTML.join(" ");
 
 //display questions one at a time
 
-//make radio buttons advance to next question
+for (let i = 0; i < quizHTML.length; i ++){
+    question[i].classList.remove("hidden");
+}
+
+//make button advance to next question
+
+let button = document.getElementById('nextButton');
 
 /*fortune/answer array
 from https://www.funny-jokes-quotes-sayings.com/funny-fortune-cookie-sayings.html and 

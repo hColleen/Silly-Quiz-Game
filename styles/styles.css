@@ -15,7 +15,7 @@ p{
     font-size: 2rem;
 }
 
-#questionHolder{
+#quizHolder{
     width: 75%;
     border: 1px solid black;
     border-radius: 10px;
@@ -33,4 +33,8 @@ p{
     padding: 10px;
     float: right;
     margin: 15px;
+}
+
+.hidden {
+    display: none;
 }
