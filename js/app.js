@@ -181,7 +181,7 @@ let getRandomQuestion = shuffle(numArr(questionsAnswers.length));
 
 //define variables
 
-let quizArray = [], quest, quizHTML = [], quizLength = 5;
+let quizArray = [], quest, quizHTML = [], quizLength = 5, displayedQuestion = [];
 let holder = document.getElementById('quizQuestion');
 let fortune = document.getElementById('quizAnswer');
 let question = document.getElementsByClassName('question');
@@ -221,13 +221,21 @@ startButton.addEventListener('click', function(e){
     question[0].classList.remove('hidden');
     startButton.classList.add('hidden');
     nextButton.classList.remove('hidden');
+    displayedQuestion.push(question[0]);
 })
 
-/*for (let i = 0; i < quizHTML.length; i ++){
-    question[i].classList.remove("hidden");
-}*/
-
 //make button advance to next question
+for (let i = 0; i < question.length; i ++){
+    nextButton.addEventListener('click', function(){
+        question[i + 1].classList.remove('hidden')
+        displayedQuestion.push(question[i + 1]);
+            if (displayedQuestion.length == 2) {
+                displayedQuestion[0].classList.add('hidden');
+                displayedQuestion[1].classList.remove('hidden');
+                displayedQuestion.splice(0,1);
+            }
+    })
+}
 
 //select random fortune
 
