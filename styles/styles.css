@@ -35,6 +35,17 @@ p{
     margin: 15px;
 }
 
+#startButton {
+    width: 25%;
+    font-family: 'Gamja Flower', cursive;
+    font-size: 2rem;
+    background-color: dimgray;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    margin: auto;
+}
+
 .hidden {
     display: none;
 }

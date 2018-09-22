@@ -181,6 +181,8 @@ for (let i = 0; i < quizArray.length; i ++) {
 let holder = document.getElementById('quizQuestion');
 let fortune = document.getElementById('quizAnswer');
 let question = document.getElementsByClassName('question');
+let nextButton = document.getElementById('nextButton');
+let startButton = document.getElementById('startButton');
 
 holder.innerHTML = quizHTML.join(" ");
 
@@ -192,7 +194,7 @@ for (let i = 0; i < quizHTML.length; i ++){
 
 //make button advance to next question
 
-let button = document.getElementById('nextButton');
+
 
 /*fortune/answer array
 from https://www.funny-jokes-quotes-sayings.com/funny-fortune-cookie-sayings.html and 
