@@ -126,6 +126,34 @@ let questionsAnswers = [{
     answer3: 'What, You Listened to Me?'
 }];
 
+/*fortune/answer array
+from https://www.funny-jokes-quotes-sayings.com/funny-fortune-cookie-sayings.html and 
+https://www.brainyquote.com/topics/funny */
+
+let fortunes = [
+    "Some days you are pigeon, some days you are statue. Today, bring umbrella.",
+    "Two days from now, tomorrow will be yesterday.",
+    "You are cleverly disguised as responsible adult.",
+    "Life is sexually transmitted condition.",
+    "Be nice to friends. You might need them to empty your bedpan.",
+    "Fortune not found? Abort, Retry, Ignore.",
+    "If this is coffee, please bring me some tea; but if this is tea, please bring me some coffee.",
+    "Your fake plants died because you did not pretend to water them.",
+    "Everything is funny, as long as it's happening to somebody else.",
+    "Electricity is really just organized lightning.",
+    "We are all born mad. Some remain so.",
+    "Common sense is the collection of prejudices acquired by age eighteen.",
+    "The most exciting phrase to hear in science, the one that hearlds new discoveries, is not 'Eureka!' but 'That's funny...'",
+    "If two wrongs don't make a right, try three.",
+    "Be obscure clearly.",
+    "Let's have some new cliches.",
+    "Conversations would be vastly improved by the constant use of four simple words: I do not know.",
+    "Housework can't kill you, but why take a chance?",
+    "Spend a year dead for tax reasons.",
+    "Everything you like is either illegal, immoral, or fattening.",
+    "Only the mediocre are always at their best."
+    ];
+
 //select random questions/answers from array, preventing repeats (tutorial from here: https://inteist.com/javascript-generate-pseudo-random-set/ )
 
 function numArr(limit){
@@ -154,6 +182,11 @@ let getRandomQuestion = shuffle(numArr(questionsAnswers.length));
 //define variables
 
 let quizArray = [], quest, quizHTML = [], quizLength = 5;
+let holder = document.getElementById('quizQuestion');
+let fortune = document.getElementById('quizAnswer');
+let question = document.getElementsByClassName('question');
+let nextButton = document.getElementById('nextButton');
+let startButton = document.getElementById('startButton');
 
 //create question/answer array
 
@@ -178,51 +211,23 @@ for (let i = 0; i < quizArray.length; i ++) {
     quizHTML.push(questInfo);
 }
 
-let holder = document.getElementById('quizQuestion');
-let fortune = document.getElementById('quizAnswer');
-let question = document.getElementsByClassName('question');
-let nextButton = document.getElementById('nextButton');
-let startButton = document.getElementById('startButton');
-
 holder.innerHTML = quizHTML.join(" ");
 
 //display questions one at a time
+//start button working
+nextButton.classList.add('hidden');
 
-for (let i = 0; i < quizHTML.length; i ++){
+startButton.addEventListener('click', function(e){
+    question[0].classList.remove('hidden');
+    startButton.classList.add('hidden');
+    nextButton.classList.remove('hidden');
+})
+
+/*for (let i = 0; i < quizHTML.length; i ++){
     question[i].classList.remove("hidden");
-}
+}*/
 
 //make button advance to next question
-
-
-
-/*fortune/answer array
-from https://www.funny-jokes-quotes-sayings.com/funny-fortune-cookie-sayings.html and 
-https://www.brainyquote.com/topics/funny */
-
-let fortunes = [
-"Some days you are pigeon, some days you are statue. Today, bring umbrella.",
-"Two days from now, tomorrow will be yesterday.",
-"You are cleverly disguised as responsible adult.",
-"Life is sexually transmitted condition.",
-"Be nice to friends. You might need them to empty your bedpan.",
-"Fortune not found? Abort, Retry, Ignore.",
-"If this is coffee, please bring me some tea; but if this is tea, please bring me some coffee.",
-"Your fake plants died because you did not pretend to water them.",
-"Everything is funny, as long as it's happening to somebody else.",
-"Electricity is really just organized lightning.",
-"We are all born mad. Some remain so.",
-"Common sense is the collection of prejudices acquired by age eighteen.",
-"The most exciting phrase to hear in science, the one that hearlds new discoveries, is not 'Eureka!' but 'That's funny...'",
-"If two wrongs don't make a right, try three.",
-"Be obscure clearly.",
-"Let's have some new cliches.",
-"Conversations would be vastly improved by the constant use of four simple words: I do not know.",
-"Housework can't kill you, but why take a chance?",
-"Spend a year dead for tax reasons.",
-"Everything you like is either illegal, immoral, or fattening.",
-"Only the mediocre are always at their best."
-];
 
 //select random fortune
 
