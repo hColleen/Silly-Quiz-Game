@@ -4,7 +4,7 @@ A silly quiz game coded as a fill in for not having time to go through a walkthr
 ## To Do
 - [x] Add start button
 - [x] Add start/default text
-- [ ]Display questions one at a time
+- [ ] Display questions one at a time
 - [ ] Display fortune after questions are answered
 
 ### Possible To Do
