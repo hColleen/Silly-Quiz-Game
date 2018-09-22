@@ -23,18 +23,7 @@ p{
     margin: auto;
 }
 
-#nextButton {
-    width: 25%;
-    font-family: 'Gamja Flower', cursive;
-    font-size: 2rem;
-    background-color: dimgray;
-    border: 1px solid black;
-    border-radius: 10px;
-    padding: 10px;
-    float: right;
-    margin: 15px;
-}
-
+#nextButton,
 #startButton {
     width: 25%;
     font-family: 'Gamja Flower', cursive;
@@ -43,6 +32,14 @@ p{
     border: 1px solid black;
     border-radius: 10px;
     padding: 10px;
+}
+
+#nextButton{
+    float: right;
+    margin: 15px;
+}
+
+#startButton {
     margin: auto;
 }
 
