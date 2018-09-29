@@ -10,7 +10,8 @@ header{
     font-size: 4rem;
 }
 
-p{
+#quizQuestion,
+#quizAnswer{
     font-family: 'Gamja Flower', cursive;
     font-size: 2rem;
 }
@@ -24,7 +25,9 @@ p{
 }
 
 #nextButton,
-#startButton {
+#startButton,
+#restartButton,
+#showMe {
     width: 25%;
     font-family: 'Gamja Flower', cursive;
     font-size: 2rem;
@@ -40,6 +43,15 @@ p{
 }
 
 #startButton {
+    margin: auto;
+}
+
+#restartButton {
+    margin: left;
+    margin: 15px;
+}
+
+#showMe {
     margin: auto;
 }
 
