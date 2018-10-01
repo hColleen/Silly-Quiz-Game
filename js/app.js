@@ -181,64 +181,109 @@ let getRandomQuestion = shuffle(numArr(questionsAnswers.length));
 
 //define variables
 
-let quizArray = [], quest, quizHTML = [], quizLength = 5, displayedQuestion = [];
+let quizArray = [], quizHTML = [], quizLength = 5, displayedQuestion = [];
 let holder = document.getElementById('quizQuestion');
 let fortune = document.getElementById('quizAnswer');
-let question = document.getElementsByClassName('question');
+let question = document.querySelectorAll('question');
 let nextButton = document.getElementById('nextButton');
 let startButton = document.getElementById('startButton');
 let reset = document.getElementById("restartButton");
 let showMe = document.getElementById("showMe");
+let fortuneHolder = document.getElementById('fortuneHolder');
 
-//create question/answer array
-
-function createQuizArray() {
-    for (let i = 0; i < quizLength; i++){
-        quest = questionsAnswers[getRandomQuestion[i]];
-        quizArray.push(quest);
-    }
-}
-
-createQuizArray();
-
-//create HTML to display questions
-
-for (let i = 0; i < quizArray.length; i ++) {
-    quest = quizArray[i];
-    let questInfo = `<div class ='question hidden'><h3>${quest.question}</h3>
-    <input type = 'radio' name = 'answer1' value = '${quest.answer1}'> ${quest.answer1}<br>
-    <input type = 'radio' name = 'answer2' value = '${quest.answer2}'> ${quest.answer2}<br>
-    <input type = 'radio' name = 'answer3' value = '${quest.answer3}'> ${quest.answer3}<br>
-    </div>`
-    quizHTML.push(questInfo);
-}
-
-holder.innerHTML = quizHTML.join(" ");
-
-//display questions one at a time
-//start button working
 nextButton.classList.add('hidden');
 reset.classList.add('hidden');
 showMe.classList.add('hidden');
 fortune.classList.add('hidden');
 
-startButton.addEventListener('click', function(e){
-    question[0].classList.remove('hidden');
+
+//create question/answer array
+/*function buildQuiz(){
+    function createQuizArray() {
+        for (let i = 0; i < quizLength; i++){
+            let quest = questionsAnswers[getRandomQuestion[i]];
+            quizArray.push(quest);
+            let questHTML = quizArray[i];
+            let questInfo = `<div class ='question hidden ${i}'><h3>${questHTML.question}</h3>
+            <input type = 'radio' name = 'answer1' value = '${questHTML.answer1}'> ${questHTML.answer1}<br>
+            <input type = 'radio' name = 'answer2' value = '${questHTML.answer2}'> ${questHTML.answer2}<br>
+            <input type = 'radio' name = 'answer3' value = '${questHTML.answer3}'> ${questHTML.answer3}<br>
+            </div>`
+            quizHTML.push(questInfo);
+        }
+    }
+
+    createQuizArray();
+
+    holder.innerHTML = quizHTML.join("");
+}
+
+function showQuestion(n) {
+    quizHTML[currentQuestion].classList.add('hidden');
+    quizHTML[n].classList.remove('hidden');
+    currentQuestion = n;
+    if (currentQuestion !== 0){
+        reset.classList.remove('hidden');
+    }
+    if (currentQuestion === question.length - 1){
+        nextButton.classList.add('hidden');
+        showMe.classList.remove('hidden');
+    }
+}
+
+function showNextQuestion() {
+    showQuestion(currentQuestion + 1);
+}
+
+buildQuiz();*/
+
+function createQuizArray() {
+    for (let i = 0; i < quizLength; i++){
+        let quest = questionsAnswers[getRandomQuestion[i]];
+        quizArray.push(quest);
+        let questHTML = quizArray[i];
+        let questInfo = `<div class ='question hidden' id = '${i}'><h3>${questHTML.question}</h3>
+        <input type = 'radio' name = 'answer1' value = '${questHTML.answer1}'> ${questHTML.answer1}<br>
+        <input type = 'radio' name = 'answer2' value = '${questHTML.answer2}'> ${questHTML.answer2}<br>
+        <input type = 'radio' name = 'answer3' value = '${questHTML.answer3}'> ${questHTML.answer3}<br>
+        </div>`
+        quizHTML.push(questInfo);
+    }
+}
+
+createQuizArray();
+
+holder.innerHTML = quizHTML.join("");
+
+//display questions one at a time
+//start button working
+
+startButton.addEventListener('click',function(){
+    document.getElementById(0).classList.remove('hidden');
     startButton.classList.add('hidden');
     nextButton.classList.remove('hidden');
     reset.classList.remove('hidden');
-    displayedQuestion.push(question[0]);
-})
+});
 
 //make button advance to next question
-nextButton.addEventListener('click', function(){
-    let i = 0;
-    while (i < quizHTML.length){
-        question[i + 1].classList.remove('hidden')
-        question[i].classList.add('hidden')
+nextButton.addEventListener('click', function(num){
+    num = 4;
+    let currentQuestion = document.getElementById(num);
+    let nextQuestion = document.getElementById(num++);
+    if (num++ == quizLength){
+        fortuneHolder.classList.remove('hidden');
+        showMe.classList.remove('hidden');
+        nextButton.classList.add('hidden');
+        reset.classList.add('hidden');
+        document.getElementById('quizHolder').classList.add('hidden');
+    } else {
+        currentQuestion.classList.add('hidden');
+        nextQuestion.classList.remove('hidden');
+        //num++;
+        console.log(num);
     }
-    i++;
-})
+    return num;
+});
 
 //select random fortune
 function getFortune(arr){
@@ -257,5 +302,12 @@ fortune.innerHTML = `With a score of ${score}, your results are:<br /><h3>${resu
 //display fortune
 
 showMe.addEventListener('click', function(){
-    fortuen.classList.remove('hidden')
+    fortune.classList.remove('hidden');
+    showMe.classList.add('hidden');
+})
+
+reset.addEventListener('click', function(){
+    createQuizArray();
+    result;
+    score;
 })

@@ -15,13 +15,14 @@ header{
     font-family: 'Gamja Flower', cursive;
     font-size: 2rem;
 }
-
+#fortuneHolder,
 #quizHolder{
     width: 75%;
     border: 1px solid black;
     border-radius: 10px;
     background-color: silver;
     margin: auto;
+    padding: 10px;
 }
 
 #nextButton,
@@ -57,4 +58,8 @@ header{
 
 .hidden {
     display: none;
+}
+
+.active {
+    display: block;
 }
