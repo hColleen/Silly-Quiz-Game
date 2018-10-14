@@ -10,6 +10,11 @@ header{
     font-size: 4rem;
 }
 
+p {
+    font-family: 'Gamja Flower', cursive;
+    font-size: 2rem;
+}
+
 #quizQuestion,
 #quizAnswer{
     font-family: 'Gamja Flower', cursive;
