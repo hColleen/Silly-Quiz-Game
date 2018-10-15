@@ -1,3 +1,4 @@
+(function(){
 //question/answer array
 let questionsAnswers = [{
     question: 'What color are you most likely to wear?',
@@ -184,7 +185,6 @@ let getRandomQuestion = shuffle(numArr(questionsAnswers.length));
 let quizArray = [], quizHTML = [], quizLength = 5, displayedQuestion = [];
 let holder = document.getElementById('quizQuestion');
 let fortune = document.getElementById('quizAnswer');
-let question = document.querySelectorAll('question');
 let nextButton = document.getElementById('nextButton');
 let startButton = document.getElementById('startButton');
 let reset = document.getElementById("restartButton");
@@ -196,15 +196,14 @@ reset.classList.add('hidden');
 showMe.classList.add('hidden');
 fortune.classList.add('hidden');
 
-
 //create question/answer array
-/*function buildQuiz(){
+function buildQuiz(){
     function createQuizArray() {
         for (let i = 0; i < quizLength; i++){
             let quest = questionsAnswers[getRandomQuestion[i]];
             quizArray.push(quest);
             let questHTML = quizArray[i];
-            let questInfo = `<div class ='question hidden ${i}'><h3>${questHTML.question}</h3>
+            let questInfo = `<div class ='question hidden' id = '${i}'><h3>${questHTML.question}</h3>
             <input type = 'radio' name = 'answer1' value = '${questHTML.answer1}'> ${questHTML.answer1}<br>
             <input type = 'radio' name = 'answer2' value = '${questHTML.answer2}'> ${questHTML.answer2}<br>
             <input type = 'radio' name = 'answer3' value = '${questHTML.answer3}'> ${questHTML.answer3}<br>
@@ -218,72 +217,31 @@ fortune.classList.add('hidden');
     holder.innerHTML = quizHTML.join("");
 }
 
-function showQuestion(n) {
-    quizHTML[currentQuestion].classList.add('hidden');
-    quizHTML[n].classList.remove('hidden');
-    currentQuestion = n;
-    if (currentQuestion !== 0){
-        reset.classList.remove('hidden');
-    }
-    if (currentQuestion === question.length - 1){
-        nextButton.classList.add('hidden');
-        showMe.classList.remove('hidden');
-    }
-}
 
-function showNextQuestion() {
-    showQuestion(currentQuestion + 1);
-}
+function showQuestion() {
+    let i = 0; 
+    while (i < quizLength) {
+        let question = document.getElementById(i);
+        question.classList.remove('hidden');
+        nextButton.addEventListener('click', function(){
+            question.classList.add('hidden');
+            i++;
+            question.classList.remove('hidden');
+            if (i === quizLength -1){
+                showMe.classList.remove('hidden');
+                nextButton.classList.add('hidden');
+            } else if (i >= 0 && i < quizLength -1){
+                nextButton.classList.remove('hidden');
+                startButton.classList.add('hidden');
+            }
+        })
+    };
+};
 
-buildQuiz();*/
 
-function createQuizArray() {
-    for (let i = 0; i < quizLength; i++){
-        let quest = questionsAnswers[getRandomQuestion[i]];
-        quizArray.push(quest);
-        let questHTML = quizArray[i];
-        let questInfo = `<div class ='question hidden' id = '${i}'><h3>${questHTML.question}</h3>
-        <input type = 'radio' name = 'answer1' value = '${questHTML.answer1}'> ${questHTML.answer1}<br>
-        <input type = 'radio' name = 'answer2' value = '${questHTML.answer2}'> ${questHTML.answer2}<br>
-        <input type = 'radio' name = 'answer3' value = '${questHTML.answer3}'> ${questHTML.answer3}<br>
-        </div>`
-        quizHTML.push(questInfo);
-    }
-}
+buildQuiz();
 
-createQuizArray();
-
-holder.innerHTML = quizHTML.join("");
-
-//display questions one at a time
-//start button working
-
-startButton.addEventListener('click',function(){
-    document.getElementById(0).classList.remove('hidden');
-    startButton.classList.add('hidden');
-    nextButton.classList.remove('hidden');
-    reset.classList.remove('hidden');
-});
-
-//make button advance to next question
-nextButton.addEventListener('click', function(num){
-    num = 4;
-    let currentQuestion = document.getElementById(num);
-    let nextQuestion = document.getElementById(num++);
-    if (num++ == quizLength){
-        fortuneHolder.classList.remove('hidden');
-        showMe.classList.remove('hidden');
-        nextButton.classList.add('hidden');
-        reset.classList.add('hidden');
-        document.getElementById('quizHolder').classList.add('hidden');
-    } else {
-        currentQuestion.classList.add('hidden');
-        nextQuestion.classList.remove('hidden');
-        //num++;
-        console.log(num);
-    }
-    return num;
-});
+startButton.addEventListener('click', showQuestion());
 
 //select random fortune
 function getFortune(arr){
@@ -296,6 +254,7 @@ function getScore(){
 
 let result = getFortune(fortunes);
 let score = getScore();
+fortuneHolder.classList.remove('hidden');
 
 fortune.innerHTML = `With a score of ${score}, your results are:<br /><h3>${result}</h3>`
 
@@ -311,3 +270,4 @@ reset.addEventListener('click', function(){
     result;
     score;
 })
+})();
