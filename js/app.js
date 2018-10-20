@@ -235,8 +235,8 @@ startButton.addEventListener('click', function(){
 
 nextButton.addEventListener('click', function(){
     slides[n].classList.add('hidden');
-    slides[n+1].classList.remove('hidden');
     n = n++;
+    slides[n].classList.remove('hidden');
 
     if (n === quizLength - 1){
         nextButton.classList.add('hidden');
@@ -255,13 +255,13 @@ function getScore(){
 
 let result = getFortune(fortunes);
 let score = getScore();
-fortuneHolder.classList.remove('hidden');
 
 fortune.innerHTML = `With a score of ${score}, your results are:<br /><h3>${result}</h3>`
 
 //display fortune
 
 showMe.addEventListener('click', function(){
+    fortuneHolder.classList.remove('hidden');
     fortune.classList.remove('hidden');
     showMe.classList.add('hidden');
 })
