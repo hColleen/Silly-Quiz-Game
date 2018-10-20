@@ -41,6 +41,7 @@ p {
     border: 1px solid black;
     border-radius: 10px;
     padding: 10px;
+    cursor: pointer;
 }
 
 #nextButton{
@@ -63,8 +64,4 @@ p {
 
 .hidden {
     display: none;
-}
-
-.active {
-    display: block;
 }
