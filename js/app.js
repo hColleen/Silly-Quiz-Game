@@ -186,13 +186,10 @@ let quizArray = [], quizHTML = [], quizLength = 5;
 let holder = document.getElementById('quizQuestion');
 let fortune = document.getElementById('quizAnswer');
 let nextButton = document.getElementById('nextButton');
-let startButton = document.getElementById('startButton');
-let reset = document.getElementById("restartButton");
 let showMe = document.getElementById("showMe");
 let fortuneHolder = document.getElementById('fortuneHolder');
+let quizHolder = document.getElementById('quizHolder');
 
-nextButton.classList.add('hidden');
-reset.classList.add('hidden');
 showMe.classList.add('hidden');
 fortune.classList.add('hidden');
 
@@ -224,24 +221,22 @@ function buildQuiz(){
 buildQuiz();
 
 let slides = document.querySelectorAll('.slide')
-let n = 0;
+let currentSlide = 0;
+slides[currentSlide].classList.remove('hidden');
 
-startButton.addEventListener('click', function(){
+function showSlide(n){
+    slides[currentSlide].classList.add('hidden');
     slides[n].classList.remove('hidden');
-    startButton.classList.add('hidden');
-    nextButton.classList.remove('hidden');
-    reset.classList.remove('hidden');
-})
+    currentSlide = n;
 
-nextButton.addEventListener('click', function(){
-    slides[n].classList.add('hidden');
-    n = n++;
-    slides[n].classList.remove('hidden');
-
-    if (n === quizLength - 1){
+    if (currentSlide === slides.length - 1){
         nextButton.classList.add('hidden');
         showMe.classList.remove('hidden');
     }
+}
+
+nextButton.addEventListener('click', function(){
+    showSlide(currentSlide + 1);
 })
 
 //select random fortune
@@ -261,21 +256,9 @@ fortune.innerHTML = `With a score of ${score}, your results are:<br /><h3>${resu
 //display fortune
 
 showMe.addEventListener('click', function(){
+    quizHolder.classList.add('hidden');
     fortuneHolder.classList.remove('hidden');
     fortune.classList.remove('hidden');
     showMe.classList.add('hidden');
-})
-
-reset.addEventListener('click', function(){
-    nextButton.classList.add('hidden');
-    reset.classList.add('hidden');
-    startButton.classList.remove('hidden');
-    n = 0;
-    quizArray = [];
-    quizHTML = [];
-    createQuizArray();
-    buildQuiz();
-    result;
-    score;
 })
 })();
